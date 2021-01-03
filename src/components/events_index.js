@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
-import {increment, decrement} from '../actions'
+import {readEvents} from '../actions'
 
 class EventsIndex extends Component {
   componentDidMount(){
