@@ -1,11 +1,13 @@
+import _ from 'lodash'
 import {READ_EVENTS} from '../actions'
 
 
-export default (state={}, action) => {
+// eslint-disable-next-line import/no-anonymous-default-export
+export default (events={}, action) => {
     switch(action.type){
         case READ_EVENTS:
-            return state
+            return _.mapKeys(action.response.data, 'id')
         default:
-            return state
+            return events
     }
 }
